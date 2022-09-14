@@ -17,7 +17,7 @@ def _strip_html(text):
     tag_re = re.compile(r'<[^>]+>')
     return tag_re.sub('', str(text))
 
-url = 'https://www.pro-football-reference.com/years/2019/scrimmage.htm'
+url = 'https://www.pro-football-reference.com/years/2021/scrimmage.htm'
 ## Scrape for RB stats
 res = requests.get(url)
 soup = BeautifulSoup(res.text,features="html.parser")
